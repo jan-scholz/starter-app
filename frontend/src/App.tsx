@@ -1,17 +1,10 @@
-import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Counter } from './components/Counter/Counter'
+import { BackendMessage } from './components/BackendMessage/BackendMessage'
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('/api/hello')
-      .then(response => response.json())
-      .then(data => setMessage(data.Hello));
-  }, []);
 
   return (
     <>
@@ -23,14 +16,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite + React + TS + FastAPI</h1>
       <Counter />
-      <p>
-        Message from backend: {message}
-      </p>
-      <p>
-        Edit <code>src/App.tsx</code> and save to test HMR
-      </p>
+      <BackendMessage />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
