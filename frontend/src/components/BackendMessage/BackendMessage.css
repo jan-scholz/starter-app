@@ -1,6 +1,10 @@
 /* Styles for BackendMessage component */
+.backend-message {
+  font-size: 1.25rem;
+}
+
 .json-response {
-  background-color: #f5f5f5;
+  background-color: #dfdfdf;
   color: #333;
   font-family: monospace;
   padding: 0.2em 0.4em;

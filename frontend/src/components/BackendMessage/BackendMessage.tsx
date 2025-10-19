@@ -11,7 +11,7 @@ export function BackendMessage() {
   }, []);
 
   return (
-    <p>
+    <p className="backend-message">
       Message from backend: <span className="json-response">{message}</span>
     </p>
   );
