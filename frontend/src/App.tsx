@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Counter } from './components/Counter/Counter'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [message, setMessage] = useState('');
 
   useEffect(() => {
@@ -24,17 +24,13 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Message from backend: {message}
-        </p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test Hot Module Replacement (HMR)
-        </p>
-      </div>
+      <Counter />
+      <p>
+        Message from backend: {message}
+      </p>
+      <p>
+        Edit <code>src/App.tsx</code> and save to test HMR
+      </p>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
