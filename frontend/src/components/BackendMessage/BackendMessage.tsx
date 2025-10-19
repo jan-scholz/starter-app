@@ -7,12 +7,12 @@ export function BackendMessage() {
   useEffect(() => {
     fetch('/api/hello')
       .then(response => response.json())
-      .then(data => setMessage(data.Hello));
+      .then(data => setMessage(JSON.stringify(data)));
   }, []);
 
   return (
     <p>
-      Message from backend: {message}
+      Message from backend: <span className="json-response">{message}</span>
     </p>
   );
 }
