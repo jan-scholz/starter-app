@@ -1,4 +1,4 @@
-.PHONY: build up down clean run-prod stop-prod
+.PHONY: build up down clean clean-all run-prod stop-prod
 
 build:
 	docker compose build
@@ -10,6 +10,10 @@ down:
 	docker compose down
 
 clean:
+	rm -rf frontend/dist
+	rm -rf frontend/node_modules
+
+clean-all:
 	docker compose down -v --rmi all
 	rm -rf frontend/dist
 	rm -rf frontend/node_modules
