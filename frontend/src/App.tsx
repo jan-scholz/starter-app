@@ -32,7 +32,7 @@ function App() {
           Message from backend: {message}
         </p>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Edit <code>src/App.tsx</code> and save to test Hot Module Replacement (HMR)
         </p>
       </div>
       <p className="read-the-docs">
