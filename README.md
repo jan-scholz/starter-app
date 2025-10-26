@@ -28,6 +28,25 @@ The production environment runs in a single container. The application is availa
 - `make run-prod`: Build the production image and run it.
 - `make stop-prod`: Stop the production container.
 
+## Testing
+
+Test endpoints can be easily tested with `curl`. Make sure to use the correct (backend) port, e.g. `8000`.
+
+```
+curl localhost:8000/api/users/
+# [{"username":"Rick"},{"username":"Morty"}]%
+
+curl localhost:8000/api/users/me
+# {"username":"fakecurrentuser"}%
+```
+
+## Documentation
+
+The automatically generated documentatino can be accessed at either of these addresses:
+
+- [localhost:8000/docs](http://localhost:8000/docs)
+- [localhost:8000/docs](http://localhost:8000/redoc)
+
 ## Directory Structure
 
 ```
