@@ -1,5 +1,7 @@
+ARG NODE_VERSION
+
 # Stage 1: Build frontend
-FROM node:24-alpine AS frontend-builder
+FROM node:${NODE_VERSION:-24-alpine} AS frontend-builder
 WORKDIR /app/frontend
 
 COPY frontend/package*.json ./

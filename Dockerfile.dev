@@ -1,4 +1,6 @@
-FROM node:24-alpine
+ARG NODE_VERSION
+
+FROM node:${NODE_VERSION:-24-alpine}
 WORKDIR /app
 COPY frontend/package*.json ./
 RUN npm install

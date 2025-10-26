@@ -28,6 +28,21 @@ The production environment runs in a single container. The application is availa
 - `make run-prod`: Build the production image and run it.
 - `make stop-prod`: Stop the production container.
 
+### Dependencies
+
+Node.js is used to compile the frontend and serve it for the hot-reloading development server. The Node.js version is centrally set in the `.env` file.
+
+```
+NODE_VERSION=24-alpine
+```
+
+Spin up the development services (`make build && make up`) and check the node version with:
+
+```bash
+docker compose exec frontend node -v
+
+```
+
 ## Testing
 
 Test endpoints can be easily tested with `curl`. Make sure to use the correct (backend) port, e.g. `8000`.
