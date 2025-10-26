@@ -2,6 +2,8 @@ services:
   backend:
     build:
       context: .
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION}
       dockerfile: Dockerfile
     ports:
       - "8000:8000"

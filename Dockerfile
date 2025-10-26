@@ -1,4 +1,5 @@
 ARG NODE_VERSION
+ARG PYTHON_VERSION
 
 # Stage 1: Build frontend
 FROM node:${NODE_VERSION:-24-alpine} AS frontend-builder
@@ -12,7 +13,7 @@ RUN npm run build
 
 
 # Stage 2: Build backend
-FROM python:3.13-slim
+FROM python:${PYTHON_VERSION:-3.13-slim}
 WORKDIR /app
 
 COPY backend/requirements.txt .
