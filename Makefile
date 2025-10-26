@@ -13,10 +13,8 @@ clean:
 	rm -rf frontend/dist
 	rm -rf frontend/node_modules
 
-clean-all:
+clean-all: clean
 	docker compose down -v --rmi all
-	rm -rf frontend/dist
-	rm -rf frontend/node_modules
 
 run-prod:
 	docker build -t starter-app .
