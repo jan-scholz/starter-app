@@ -14,7 +14,7 @@ The FastAPI app serves the Vite app as a static asset. The entire application is
 
 ### Development
 
-The development environment uses Docker Compose to run the backend server and the Vite development server with hot reloading. The application is available at `http://localhost`.
+The development environment uses Docker Compose to run the backend server and the Vite development server with hot reloading. The application is available at [http://localhost:80](http://localhost:80)`.
 
 - `make up`: Start the development servers.
 - `make down`: Stop the development servers.
@@ -45,7 +45,7 @@ curl localhost:8000/api/users/me
 The automatically generated documentatino can be accessed at either of these addresses:
 
 - [localhost:8000/docs](http://localhost:8000/docs)
-- [localhost:8000/docs](http://localhost:8000/redoc)
+- [localhost:8000/redoc](http://localhost:8000/redoc)
 
 ## Directory Structure
 
