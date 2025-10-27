@@ -49,6 +49,38 @@ Similarly, the Python version for the backend can be set in `.env` (`PYTHON_VERS
 docker compose exec backend python --version
 ```
 
+## Frontend Dependencies
+
+Run the following commands to update minor versions only (within the range allowed by your `package.json`). The `package.json` file itself will not get modified.
+
+```bash
+npm update
+npm install
+```
+
+Use `ncu` to update `package.json` itself. This will update major versions by default, but the `--target minor` option can be used to constrain the edits to `package.json`.
+
+```bash
+# install globally (once)
+npm install -g npm-check-updates
+
+# see what would be updated
+ncu
+
+# update package.json versions
+ncu -u
+
+# install the new versions
+npm install
+```
+
+After any updates install the latest dependencies and ensure there are no security vulnerabilities.
+
+```bash
+npm install
+npm audit fix
+```
+
 ## Testing
 
 Test endpoints can be easily tested with `curl`. Make sure to use the correct (backend) port, e.g. `8000`.
