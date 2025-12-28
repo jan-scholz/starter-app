@@ -1,3 +1,6 @@
+include .env
+APP_NAME ?= starter-app
+
 .PHONY: build up down clean clean-all run-prod stop-prod
 
 build:
@@ -17,8 +20,8 @@ clean-all: clean
 	docker compose down -v --rmi all
 
 run-prod:
-	docker build -t starter-app .
-	docker run -d --rm --name starter-app-prod -p 80:80 starter-app
+	docker build -t $(APP_NAME) .
+	docker run -d --rm --name $(APP_NAME)-prod -p 80:80 $(APP_NAME)
 
 stop-prod:
-	docker stop starter-app-prod
+	docker stop $(APP_NAME)-prod
