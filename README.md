@@ -12,9 +12,20 @@ The FastAPI app serves the Vite app as a static asset. The entire application is
 
 ## Usage
 
+### Quickstart
+
+Start the Docker Desktop app, create a `.env` file, and start the services.
+
+```bash
+cp -iv .env.example .env
+make up
+```
+
+Open the application at [`http://localhost:80`](http://localhost:80).
+
 ### Development
 
-The development environment uses Docker Compose to run the backend server and the Vite development server with hot reloading. The application is available at [http://localhost:80](http://localhost:80)`.
+The development environment uses Docker Compose to run the backend server and the Vite development server with hot reloading. The application is available at [`http://localhost:80`](http://localhost:80).
 
 - `make up`: Start the development servers.
 - `make down`: Stop the development servers.
